@@ -48,6 +48,7 @@
     	position:absolute;
     	top:0px;
     	bottom:0px;
+
    	}
 
    </style>
@@ -63,72 +64,87 @@
    	//GET LOCAL TIME AND ASSIGN TO EACH TICK
 
    	$(document).ready(function(){
-		setInterval(function(){
 
-			var second = $("#ss");
-			var minute = $("#mm");
-			var hour = $("#hh");
+   		$("#startTimer").click(function(){
 
-			ssTick++; //adds seconds
+   		$(this).hide();
+   		$("#clock").show(function(){
 
-			if(mmTick == 0){
-				mmTick = "00";
-			}
-
-			
-			if(hhTick == 0){
-				hhTick = "00";
-			}
-
-			if(ssTick == 0){
-				ssTick = "00";
-			}
+   			startTimer();
+   		})
 
 
+   		})
 
-			if(ssTick < 10){ //checks if seconds if less than 10 and adds a 0 before it
+   		function startTimer(){
+	   		setInterval(function(){
+
+				var second = $("#ss");
+				var minute = $("#mm");
+				var hour = $("#hh");
+
+				ssTick++; //adds seconds
+
+				if(mmTick == 0){
+					mmTick = "00";
+				}
+
+				
+				if(hhTick == 0){
+					hhTick = "00";
+				}
 
 				if(ssTick == 0){
 					ssTick = "00";
-				}else{
-					ssTick = "0" + ssTick;
 				}
 
-			}else if(ssTick == 60){
-				ssTick = "00";
 
-				mmTick++;
 
-				if(mmTick < 10){
-					mmTick = "0" + mmTick;
-				}else if(mmTick == 0){
-					mmTick = "00";
-					console.log(mmTick)
-				}else if(mmTick == 60){
-					mmTick = "00";
+				if(ssTick < 10){ //checks if seconds if less than 10 and adds a 0 before it
 
-					hhTick++;
-
-					if(hhTick==0){
-						hhTick = "00";
-					}else if(hhTick < 10){
-						hhTick = "0" + hhTick;
-					}else if(hhTick == 24){
-						hhTick = "00";
+					if(ssTick == 0){
+						ssTick = "00";
+					}else{
+						ssTick = "0" + ssTick;
 					}
 
-					console.log("___________")
+				}else if(ssTick == 60){
+					ssTick = "00";
+
+					mmTick++;
+
+					if(mmTick < 10){
+						mmTick = "0" + mmTick;
+					}else if(mmTick == 0){
+						mmTick = "00";
+						console.log(mmTick)
+					}else if(mmTick == 60){
+						mmTick = "00";
+
+						hhTick++;
+
+						if(hhTick==0){
+							hhTick = "00";
+						}else if(hhTick < 10){
+							hhTick = "0" + hhTick;
+						}else if(hhTick == 24){
+							hhTick = "00";
+						}
+
+						console.log("___________")
+					}
+
+
 				}
 
+				//Display in DIVs
+				second.html(ssTick);
+				minute.html(mmTick);
+				hour.html(hhTick);
 
-			}
+			}, 1000);
+		}
 
-			//Display in DIVs
-			second.html(ssTick);
-			minute.html(mmTick);
-			hour.html(hhTick);
-
-		}, 1000)
    	});
 
    </script>
