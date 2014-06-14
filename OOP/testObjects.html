@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+ <head><title></title>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+ <script type="text/javascript">
+
+$(document).ready(function(){
+ 	
+ 	function Car(b, p ,y, g){
+
+ 		this.brand = b;
+ 		this.price = p;
+ 		this.year = y;
+ 		this.graphic = g;
+
+ 		this.getPrice = function(){
+
+ 			console.log(this.price);
+ 		}
+ 	}
+
+ 	var myCar = new Car("Jag", 60000, 2014, "#divName");
+
+ 	console.log(myCar.price)
+ 	console.log(myCar.graphic)
+
+ 	$(myCar.graphic).click(function(){
+ 		//alert($(this).attr("id"))
+ 		//var myID = $(this).attr("id").toString()
+ 		$(myCar.graphic).animate({left:500+"px"}).fadeOut()
+ 		//$(myCar.graphic);
+ 		//$(this).animate({left:"500px;"}, 2000)
+
+ 	})
+
+ 	$(myCar.graphic).html("$"+myCar.price+" "+myCar.year)
+
+})
+
+ </script>
+ <style type="text/css">
+ 	#divName{
+
+ 		width:100px;
+ 		height:100px;
+ 		background-color:red;
+ 		position:relative;
+ 	}
+ </style>
+ </head>
+ <body>
+ 	<div id="divName"></div>
+
+ </body>
+</html>
