@@ -1,0 +1,196 @@
+<!doctype html>
+<html>
+ <head>
+  <title>Playing with JavaScript</title>
+  
+  <script type="text/javascript" src="scripts/my_library.js"></script>
+
+  <script type='text/javascript'>
+  		console.log(sayHelloWorld());
+  </script>
+
+  <script type='text/javascript'>
+
+
+
+  		//alert("Hello World!");
+
+  		//Exercise one
+  		var x = 5;
+  		var y = 10;
+
+  		var sumOfXandY = x + y;
+
+  		console.log(sumOfXandY);
+
+  		//Exercise two
+
+  		var greeting = "Hello ";
+  		var myName = "Al!";
+
+  		var sayHello = greeting + myName;
+
+  		console.log(sayHello);
+
+  		//Exercise three
+
+  		var music = ["Metal", "Rock", "Dupstep"];
+  		var instrument = ["Guitar", "Drums", "Bass", "Piano"];
+
+  		var myInterest = [music, instrument];
+
+  		console.log(myInterest[0][2]); //Dupstep
+  		console.log(myInterest[1][3]); //Guitar
+
+  		console.log(myInterest[0][0] + " " + myInterest[1][0]); // Dubstep
+  		//console.log(myInterest)
+
+  		//Logic Exercise 1 + 2
+
+  		/*var varName = 9;
+
+  		if(varName < 10){
+  			alert("This Var is less than 10. You added "+ varName)
+
+  		}else{
+
+  			alert("This var is more than 10. You added "+ varName)
+  		}*/
+
+  		//Logic Exercise 3
+
+  		var stringVar = "Al";
+
+  		if(stringVar === "Alvaro"){
+  			//alert("Name Match");
+  		}else{
+  			//alert("Names do not match");
+  		}
+
+  		//Function exercise 1
+
+  		function sayName(username){
+
+			return username;
+  		}
+
+  		function addTen(x){
+
+  			return x + 10;
+  		}
+
+      sayName("Al")
+
+  		//alert();
+
+  		//alert(addTen("9"));
+
+  		//Function exercise 2
+
+  		function noArgs(){
+
+  			console.log("Hello World from noArgs Function");
+
+  		}
+
+  		noArgs();
+
+  		//
+
+  		function validate(varName){
+
+  			if(varName < 10){
+  				alert("YES!!!!!!");
+  			}else{
+	  			alert("NO!!!!!!!");
+	  		}
+  		}
+
+  		validate(6);
+
+  		//
+  		function getDoor(doorOption){
+
+  		
+  			if(doorOption == 1){
+  				
+  				return "You get a Guinea Pig";
+
+  			}else if(doorOption == 2){
+  				
+  				return "You get Gold!!!!"
+
+  			}else if(doorOption == 3){
+  				
+  				return "You get Nothing, Sorry!";
+  			}else{
+  				
+  				return "Try a door";
+  			}
+  			
+  		}
+
+  		console.log(getDoor(2));
+
+  		function getDoor_option2(doorOption){
+
+  			var anws =  "";
+
+  			if(doorOption == 1){
+  				
+  				answ =  "You get a Guinea Pig";
+
+  			}else if(doorOption == 2){
+  				
+  				answ =  "You get Gold!!!!"
+
+  			}else if(doorOption == 3){
+  				
+  				answ = "You get Nothing, Sorry!";
+  			}else{
+  				
+  				answ =  "Try a door";
+  			}
+
+  			return answ;
+  			
+  		}
+
+  		console.log(getDoor_option2(3));
+
+  		//Switch statement
+  		function getDoor_option3(doorOption){
+
+  			var answ =  "";
+
+  			switch(doorOption){
+
+  				case 1:
+  					answ = "You Win";
+  				break;
+
+  				case 2:
+  					answ = "You lose";
+  				break;
+
+  				case 3:
+  					answ = "Consolation gift";
+  				break;
+  			}
+
+  			return answ;
+  		
+  		}
+
+  		console.log(getDoor_option3(3));
+
+
+  </script>
+
+ </head>	
+ 
+ <body>
+
+ </body>
+
+</html>

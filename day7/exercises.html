@@ -1,0 +1,61 @@
+<!doctype html>
+ <html>
+  <head>
+   <title>Day 7</title>
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+   <script type="text/javascript">
+
+ 	$(document).ready(function(){
+
+ 		function addTwo(x){
+
+ 			return x + 2;
+ 		}
+
+ 		
+
+ 		function findPalindrome(x){
+
+ 			//get word as a string
+ 			//add it to first var
+			var firstWord = x;
+ 			//reverse the incoming string	
+ 			//save it into a second var
+var secondWord = firstWord.split("").reverse().join("");
+ 			//compare var 1 and var 2
+ 			console.log(firstWord)
+ 			console.log(secondWord)
+
+
+ 			//return true if they match
+
+ 			//return false if they don't match
+
+ 			//$("#output").html(x);
+ 		}
+
+ 		findPalindrome("Watermelon");
+
+ 		function getVowels(word){
+ 			//get string
+
+ 			//break into array or match() against search characters
+
+ 			//if word broken into array, then loop thru array and add + 1 to a character variable to keep track of vowel frequency. ie. Anna, should have a 2 in A-count var.
+
+ 			//keep track of vowel frequency (optional)
+
+ 		}
+
+ 		getVowels("abstemious"); //has all vowels
+
+
+ 	});
+   </script>
+  </head>
+  <body>
+  	<div id="output"></div>
+
+  	   
+  </body>
+ </html>

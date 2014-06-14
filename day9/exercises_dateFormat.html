@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+ <head>
+  <title>App</title>
+
+<!-- load second -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+ 
+
+  <script type="text/javascript">
+
+  $(document).ready(function(){
+
+  	$("#dateSubmit").click(function(){
+
+		var initialDate = $("#iniDate").val();
+  			
+		if(initialDate != ""){
+			//Validate here
+			var key = initialDate.split("");
+			var slashPositions = new Array();
+			var correctFormat = [1,1,0,1,1,0,1,1,1,1];
+			var currentFormat = new Array();
+		
+			for(var i = 0; i < key.length; i++){
+
+				 if(isNaN(parseInt(key[i])) == false){
+				 	//alert(i + " it is a number");
+				 	currentFormat.push(1)
+				 }else{
+				 	//alert(i + " it is NOT a number");
+				 	currentFormat.push(0)
+				 }
+				//May not need this
+				if(key[i]=="/"){
+					slashPositions.push(i)
+				}
+			}
+
+			for(var j = 0; j<correctFormat.length; j++){
+
+				if(currentFormat[j] == correctFormat[j]){
+
+					if(j==(correctFormat.length - 1)){
+						alert("Great job! Date Validated");
+					}
+
+				}else{
+					alert("Something is wrong with Format")
+				}
+
+			}
+		}else{
+			//alert the user for input
+			alert("Please insert a date in this format: dd/mm/yyyy");
+		}
+
+
+  	});
+});
+
+  </script>
+ </head>
+ <body>
+ 	<input type="text" id="iniDate" value="06/06/1900"/>
+ 	<input type="button" value="submitDate" id="dateSubmit">
+ </body>
+</html>

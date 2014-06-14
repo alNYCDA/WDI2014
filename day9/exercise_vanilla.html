@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+ <head>
+  <title>Pre-Jquery</title>
+
+<!-- load second -->
+<style type="text/css">
+
+#testBox{
+
+	width:100px;
+	height:100px;
+	background-color:red;
+	opacity: 1;
+}
+</style>
+ 
+
+  
+ </head>
+ <body>
+
+ 	<div id="testBox"></div>
+
+ 	<script type="text/javascript">
+
+ 	var startOpacity = 1
+
+  function fadeOut()
+	{
+		startOpacity = startOpacity - 0.1;
+
+		if(startOpacity >= -1){
+			document.getElementById("testBox").style.opacity = startOpacity;
+		}
+	}
+	
+	setInterval(fadeOut,1000/12);
+
+  </script>
+ 
+ </body>
+</html>

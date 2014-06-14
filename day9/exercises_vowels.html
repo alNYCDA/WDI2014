@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+ <head>
+  <title>App</title>
+
+<!-- load second -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+ 
+
+  <script type="text/javascript">
+
+  $(document).ready(function(){
+  	
+  	function checkForVowels(word){
+  		// var answer = prompt("am i alive?")
+  		// alert("you said "+ answer)
+
+  		var checkForVowels = word.split("");
+
+  		var vowels = ["a", "e", "i", "o", "u"];
+
+  		var vowelsFound = []
+
+  		for(var j = 0; j<vowels.length; j++){
+
+  			if(checkForVowels.indexOf(vowels[j]) > -1 || checkForVowels.indexOf(vowels[j].toUpperCase()) > -1)
+  			{
+  				vowelsFound.push(vowels[j]);
+  			}
+  			//console.log(checkForVowels.indexOf(vowels[j]));
+  		}
+
+  		if(vowelsFound.length == 0){
+  			alert("This word has no vowels")
+  		}
+
+  		console.log(vowelsFound)
+  		console.log(vowelsFound.length)
+  	}
+
+
+  	$("#wordSubmit").click(function(){
+  		checkForVowels($("#iniWord").val())
+
+  	});
+
+});
+
+  </script>
+ </head>
+ <body>
+ 	<input type="text" id="iniWord" value=""/>
+ 	<input type="button" value="TEST ME" id="wordSubmit">
+ </body>
+</html>

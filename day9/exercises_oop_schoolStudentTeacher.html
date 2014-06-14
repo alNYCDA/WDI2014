@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+ <head>
+  <title>App</title>
+
+<!-- load second -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+ 
+
+  <script type="text/javascript">
+
+  $(document).ready(function(){
+  	
+  	function Person(fname, lname, gender){
+  		this.fname = fname;
+  		this.lname = lname;
+  		this.gender = gender;
+
+  	}
+
+  	 var personOne = new Person("Al", "Olsen", "M");
+  	// console.log(personOne.fname);
+
+  	function Teacher(IDNumber, _class, grade){
+
+  		this.IDNumber = IDNumber;
+  		this.Class = _class;
+  		this.canTeach = true;
+  		this.grade = grade;
+  		this.teach = function(){
+
+  			return "First order of business: SMILE :)";
+  		}
+  	}
+
+  	Teacher.prototype = new Person();
+
+  	var teacherOne = new Teacher(888, "WDI", "Intro")
+  	teacherOne.fname = "Alvaro";
+  	teacherOne.lname = "Olsen";
+  	teacherOne.gender = "M";
+
+  	console.log(Teacher)
+
+  	function Student(IDNumber, _class, grade, graduationDate){
+  		this.IDNumber = IDNumber;
+  		this.Class = _class;
+  		this.grade = grade;
+  		this.graduationDate = graduationDate;
+  		this.canTeach = false;
+  		this.learn = function(){
+
+  			return "Bring it!";
+  		}
+  	}
+
+  	Student.prototype = new Person();
+
+  	var studentOne = new Student(9999, "WDI", "Intro", 2014);
+  	studentOne.fname = "John";
+  	studentOne.lname = "Doe";
+  	studentOne.gender = "M";
+
+  	console.log("__________________")
+  	console.log(studentOne)
+  	console.log("__________________")
+
+  	console.log(studentOne.IDNumber);
+  	console.log(teacherOne.teach());
+  	console.log(studentOne.learn());
+
+  	function School(schoolName){
+
+  		this.schoolName = schoolName;
+  		this.teacherList = [];
+  		this.studentList = [];
+  		this.addTeacher = function(obj){
+  			this.teacherList.push(obj);
+  		}
+  		this.addStudent = function(obj){
+  			this.studentList.push(obj);
+  		}
+  	}
+
+  	var nycda = new School("NYCDA");
+  	var FIT = new School("FIT");
+  	var NYU = new School("NYU");
+  	var TCI = new School("TCI")
+
+
+  	var t_1 = new Teacher(001, "CogSci", "G");
+	  	t_1.fname = "Jane";
+	  	t_1.lname = "Doe";
+	  	t_1.gender = "Female";
+  	var t_2 = new Teacher(002, "Bio", "UG");
+	  	t_2.fname = "Joe";
+	  	t_2.lname = "SixPack";
+	  	t_2.gender = "Male";
+  	var t_3 = new Teacher(003, "Chem", "G");
+	  	t_3.fname = "Sarah";
+	  	t_3.lname = "Donohue";
+	  	t_3.gender = "Female";
+  	var t_4 = new Teacher(004, "Web", "UG");
+	  	t_4.fname = "Mark";
+	  	t_4.lname = "Zuckerberg";
+	  	t_4.gender = "Male";
+  	var t_5 = new Teacher(005, "UI/UX", "UG");
+	  	t_5.fname = "Rafael";
+	  	t_5.lname = "Cesar";
+	  	t_5.gender = "Male";
+
+	var s_1 = new Student(0001, "BIO", "UG", 2014);
+		s_1.fname = "A";
+		s_1.lname = "0";
+		s_1.gender = "M";
+
+	var s_2 = new Student(0002, "BIO", "UG", 2014);
+		s_2.fname = "B";
+		s_2.lname = "0";
+		s_2.gender = "M";
+
+	var s_3 = new Student(0003, "BIO", "UG", 2014);
+		s_3.fname = "C";
+		s_3.lname = "0";
+		s_3.gender = "M";
+
+	var s_4 = new Student(0004, "BIO", "UG", 2014);
+		s_4.fname = "D";
+		s_4.lname = "0";
+		s_4.gender = "M";
+
+	var s_5 = new Student(0005, "BIO", "UG", 2014);
+		s_5.fname = "E";
+		s_5.lname = "0";
+		s_5.gender = "M";
+
+
+  	nycda.addTeacher(teacherOne);
+  	nycda.addStudent(studentOne);
+
+  	FIT.addTeacher(t_1);
+  	FIT.addTeacher(t_2);
+  	FIT.addTeacher(t_3);
+
+  	console.log(nycda.teacherList);
+  	console.log(nycda.studentList);
+
+  	console.log(FIT.teacherList);
+
+  });
+
+  </script>
+ </head>
+ <body>
+ 	<input type="text" id="iniWord" value=""/>
+ 	<input type="button" value="TEST ME" id="wordSubmit">
+ </body>
+</html>

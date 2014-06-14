@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+ <head>
+  <title>NEWS ARTICLE</title>
+  <style type="text/css">
+  	html, body{
+
+  		min-height:100%;
+  		margin:0;
+  		padding:0;
+  	}
+  	#topBar{
+
+  		position:fixed;
+  		width:100%;
+  		background-color:#000;
+  		height:20px;
+  	}
+  	#topBar span{
+  		width:900px;
+  		margin:0 auto;
+  		display:block;
+  		color:#fff;
+  		font-family:serif;
+  		font-size:8pt;
+  	}
+
+  	#tLogo{
+  		height:20px;
+  		width:20px;
+  	}
+
+  	#mainTable{
+  		position:relative;
+  		top:20px;
+  		border:solid 1px #000;
+  		width:900px;
+  		height:100%;
+  		margin: 0 auto; /* centers */
+  	}
+
+  	#mainTable tr td{
+  		border:solid 1px #000;
+
+  	}
+
+  	#ad{
+  		height:100px;
+  	}
+
+  	#ad img{
+  		position:relative;
+  		margin:0 auto;
+  		width:500px;
+  	}
+
+  	#logo, #search{
+
+  		height:75px;
+  	}
+
+  	#date{
+
+  		height:25px;
+  	}
+
+  	#navigation{
+  		height:100px;
+  	}
+
+  	#breadCrumbs{
+  		height:30px;
+  	}
+
+  	#mainContent{
+  		width:75%;
+  		min-height:100%;
+  	}
+
+  	#sideBar{
+  		width:25%;
+  		min-height:100%;
+  	}
+  </style>
+ </head>
+ <body>
+ <div id="topBar">
+ 	<span>
+ 		<img src="images/tLogo.png" id="tLogo"/>
+ 		|
+ 		LINK 1 | LINK 2 | LINK 3 | LINK 4
+ 	</span>
+ </div>
+  <table id="mainTable">
+   <tr>
+    <td colspan="2" id="ad"> <img src="images/ad.png" id="adImg"/></td>
+   </tr>
+   <tr>
+    <td id="logo">LOGO GOES HERE</td>
+    <td id="search">SEARCH GOES HERE</td>
+   </tr>
+   <tr>
+    <td colspan="2" id="date">DATE GOES HERE</td>
+   </tr>
+   <tr>
+    <td colspan="2" id="navigation">
+    	NAVIGATION TABLE GOES HERE
+    </td>
+   </tr>
+   <tr>
+    <td colspan="2" id="breadCrumbs">
+    	BREADCRUMBS GO HERE
+    </td>
+   </tr>
+   <tr>
+    <td id="mainContent">
+    	<iframe width="100%" height="480px" src="http://www.youtube.com/embed/FKkejo2dMV4" frameborder="0" allowfullscreen></iframe>
+    </td>
+    <td id="sideBar">SIDE BAR GOES HERE
+   </tr>
+
+  </table>
+ </body>
+</html>
