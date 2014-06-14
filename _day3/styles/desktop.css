@@ -1,0 +1,75 @@
+/* THESE ARE THE NAV CSS DEFINITIONS */
+nav ul{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+}
+
+nav li
+{
+	float:left;
+	text-align:center;
+}
+
+nav a
+{
+	display:block;
+	background-color:#dddddd;
+	width:80px;
+	vertical-align: middle;
+	padding:40px;
+	font-weight:bold;
+	color:#000;
+	font-family:sans-serif;
+	text-decoration:none;
+}
+
+nav a:hover{
+	background-color:#f00;
+	color:#fff;
+}
+/* END NAV CSS DEFINITIONS */
+
+/* THESE ARE THE BUTTONS CSS DEFINITIONS */
+#buttons ul{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+	position:relative;
+}
+
+#buttons a
+{
+	display:block;
+	border:solid 1px #000;
+	background-color:#dddddd;
+	width:80px;
+	vertical-align: middle;
+	padding:5px;
+	font-weight:bold;
+	color:#000;
+	font-family:sans-serif;
+	text-decoration:none;
+	margin-left:2px;
+	margin-top:2px;
+	border-radius:5px;
+
+}
+
+#buttons li
+{
+	display:inline-block;
+	text-align:center;
+}
+
+#buttons a:hover{
+	background-color:#f00;
+	color:#fff;
+}
+
+#buttons{
+	text-align:center;
+}
+/* END CSS DEFINITIONS */

@@ -1,0 +1,99 @@
+/*nav ul{
+  display: inline;
+  list-style: none;
+}
+
+nav ul li{
+  margin-right: 20px;
+  float: left;
+}
+
+nav ul li a{
+  color: #000;
+  text-decoration: none;
+  display: block;
+}
+
+nav ul ul{
+  display: none;
+  position: absolute;
+  padding: 0;
+}
+
+nav ul ul li{
+  float: none;
+  position:relative;
+}
+
+nav ul li:hover > ul{
+  display: block;
+}*/
+
+nav ul ul{
+  display: none;
+  padding: 0;
+  position: absolute;
+}
+
+nav ul li:hover ul{
+  display: block;
+}
+
+nav ul{
+  display: inline-table;
+  list-style: none;
+}
+
+nav ul li{
+  float: left;
+  margin-right: 20px;
+}
+
+nav ul ul li{
+  float: none;
+  padding:4px;
+}
+
+nav ul ul li:hover{
+  float: none;
+  padding:4px;
+  background-color: aquamarine;
+}
+
+
+
+a{
+  text-decoration: none;
+  color: aquamarine;
+  font-weight: bold;
+}
+
+nav ul{
+  background-color: blue;
+  padding:10px;
+  border-radius: 10px ;
+}
+
+.menu-icon{
+  width: 50px;
+  display: none;
+}
+
+@media (max-width: 420px){
+  nav ul{
+    display: none;
+    width: 70%;
+  }
+  nav ul li{
+    float: none;
+  }
+  nav ul li ul{
+    display: none !important;
+  }
+  nav ul li ul{
+    display: none;
+  }
+  .menu-icon{
+    display: inline-block;
+  }
+}
