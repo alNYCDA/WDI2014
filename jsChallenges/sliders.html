@@ -1,0 +1,77 @@
+<!doctype html>
+ <html>
+  <head><title></title>
+
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+   <script type="text/javascript">
+
+   	$(document).ready(function(){
+
+
+   		//$(".link").hide();
+
+   		$(".icon").click(function(){
+
+   			$(this).animate({left:"400px"}, 1000, function(){
+
+   				$(this).sibling(".link").show();
+
+   			})
+
+   		});
+
+   	});
+
+   </script>	
+
+
+  	<style type="text/css">
+
+  		.block{
+
+  			width:100%;
+  			border:solid 1px #000;
+  			height:50px;
+
+  		}
+  		.icon{
+
+  			width:30px;
+  			height:30px;
+  			background-color:#ccc;
+  			float:left;
+  			position:relative;
+  			display:inline-block;
+
+  		}
+
+  		.link{
+
+  			display:inline-block;
+  			position:relative;
+  			display:none;
+
+  		}
+
+
+  	</style>
+  </head>
+  <body>
+  	<div class="block">
+     <div class="icon"></div>
+     <div class="link">Hello World</div>
+  	</div>
+
+  	<div class="block">
+     <div class="icon"></div>
+     <div class="link">Hello World 1</div>
+  	</div>
+
+  	<div class="block">
+     <div class="icon"></div>
+     <div class="link">Hello World 2</div>
+  	</div>
+
+  </body>
+ </html>
